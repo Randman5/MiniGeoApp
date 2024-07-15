@@ -12,7 +12,7 @@ class AddMarkerUseCase @Inject constructor(
 ) {
     fun execute (point: Point, text:String) : MarkerDto {
         val entity = mapper.toEntity(point,text)
-        markerDao.addMarker(mapper.toEntity(point,text))
+        markerDao.addMarker(entity)
         return mapper.toDto(entity)
     }
 }

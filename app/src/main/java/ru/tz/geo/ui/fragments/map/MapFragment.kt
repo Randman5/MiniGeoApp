@@ -293,7 +293,6 @@ class MapFragment : Fragment() {
     private fun showMarkerDialog(point: Point, obj: PlacemarkMapObject) {
         AlertDialog.Builder(requireContext())
             .setPositiveButton(getString(R.string.create_route)) { dialog, _ ->
-                obj.userData = point
                 viewModel.setRoute(point, obj)
                 dialog.cancel()
             }

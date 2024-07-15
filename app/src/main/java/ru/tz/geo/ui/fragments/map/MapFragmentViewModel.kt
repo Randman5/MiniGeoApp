@@ -47,7 +47,6 @@ class MapFragmentViewModel : ViewModel() {
     init {
         App.get().appComponent.inject(this)
         getMarkers()
-        val l = 1
     }
 
 
@@ -65,6 +64,7 @@ class MapFragmentViewModel : ViewModel() {
     }
 
     fun setRoute(point: Point, obj: PlacemarkMapObject) {
+        removeCurrentRoute()
         routeEndPoint.postValue(point)
         endPointObject = obj
     }
@@ -77,6 +77,7 @@ class MapFragmentViewModel : ViewModel() {
         currentRoute?.let {
             currentRouteRemove.postValue(it)
             currentRoute = null
+            endPointObject = null
         }
     }
 
