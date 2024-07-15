@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:gravity="center">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="oval">
+        <solid android:color="#CC000B"/>
+    </shape>
+</item>
+<item
+    android:drawable="@drawable/ic_nav_arrow"
+    android:gravity="center"
+    android:end="2dp"
+    android:start="2dp"
+    android:top="2dp"
+    android:bottom="2dp"/>
+</layer-list>
